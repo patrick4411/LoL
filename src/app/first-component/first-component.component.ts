@@ -1,0 +1,61 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-first-component',
+  templateUrl: './first-component.component.html',
+  styleUrls: ['./first-component.component.css']
+})
+export class FirstComponentComponent implements OnInit {
+
+
+  astazi= new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDay(), 0, 0, 0);
+  grupHappyBirthday = new Array();
+  ziDeNastere: Date;
+  nume: string;
+  msg: string;
+  index: number;
+  filtru: boolean;
+  mesajTest: string;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.index = 0;
+    this.mesajTest = 'Sub 10!';
+    this.filtru = false;
+    this.nume = 'Patrick';
+    this.ziDeNastere = new Date('2018-04-14 0:00:00');
+    if (this.isZiDeNastere(this.ziDeNastere) === true) {
+      this.msg = 'La Multi Ani' + this.nume + '!';
+    } else {
+      this.msg = 'Noroc In Viata! Ai castigat un PlayStation4!';
+    }
+
+
+
+    while(this.filtru !== true) {
+
+      this.index ++;
+      if(this.index > 10) {
+        this.filtru = true;
+      }
+      console.log(this.index);
+      console.log(this.filtru);
+    }
+
+    if (this.filtru === true) {
+      this.mesajTest = 'a trecut de 10!!!!';
+    }
+
+  }
+
+  isZiDeNastere(ziNastere: Date): boolean {
+    if (ziNastere === this.astazi) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
+}

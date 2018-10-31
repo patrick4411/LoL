@@ -11,23 +11,23 @@ export class LogicaSiArgumentareComponent implements OnInit {
   grupHappyBirthday = new Array();
   ziDeNastere: Date;
   nume: string;
+  nume1 : string;
   msg: string;
   index: number;
   filtru: boolean;
   mesajTest: string;
-
   constructor() { }
 
   ngOnInit() {
     this.index = 0;
     this.mesajTest = 'Sub 10!';
     this.filtru = false;
-    this.nume = 'Patrick';
-    this.ziDeNastere = new Date('2018-04-14 0:00:00');
-    if (this.isZiDeNastere(this.ziDeNastere) === true) {
-      this.msg = 'La Multi Ani' + this.nume + '!';
+    this.nume = 'Host \'s Server';
+    this.ziDeNastere = new Date('2018-09-28 0:00:00');
+    if (this.isZiDeNastere(this.ziDeNastere) === false {
+      this.msg = 'La Multi Ani ' + this.nume;
     } else {
-      this.msg = 'Noroc In Viata! Ai castigat un PlayStation4!';
+      this.msg = 'Mai e putin!';
     }
 
 

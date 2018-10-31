@@ -1,4 +1,32 @@
 <span style="color:red">Astazi este: {{this.astazi}}</span>
 <div style="color:green">Ziua Lui Patrick este in : {{this.ziDeNastere}}</div>
-<div>{{this.msg}}</div>
+<div style="color:blue">{{this.msg}}</div>
 <span>{{this.mesajTest}}</span>
+
+<style>
+
+#myDIV {
+    width: 200px;
+    height: 110px;
+    background: red;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {background-color: red;}
+    to {background-color: rgb(0, 2, 128);}
+    to {background-color: green;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {background-color: red;}
+    to {background-color: rgb(0, 2, 128);}
+    to {background-color: green;}
+}
+
+</style>
+
+<h2 id= "myDIV">Sa stiti ca am mai multe culori si nu ma pot opri din circulatieeeeeeee!!</h2>

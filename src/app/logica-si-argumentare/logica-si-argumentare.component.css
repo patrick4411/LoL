@@ -1,0 +1,22 @@
+
+#myDIV {
+    width: 300px;
+    height: 200px;
+    background: red;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {background-color: red;}
+    to {background-color: rgb(0, 2, 128);}
+    to {background-color: green;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {background-color: red;}
+    to {background-color: rgb(0, 2, 128);}
+    to {background-color: green;}
+}

@@ -24,7 +24,7 @@ export class LogicaSiArgumentareComponent implements OnInit {
     this.filtru = false;
     this.nume = 'Host \'s Server';
     this.ziDeNastere = new Date('2018-09-28 0:00:00');
-    if (this.isZiDeNastere(this.ziDeNastere) === false {
+    if (this.isZiDeNastere(this.ziDeNastere) === false) {
       this.msg = 'La Multi Ani ' + this.nume;
     } else {
       this.msg = 'Mai e putin!';
@@ -54,6 +54,6 @@ export class LogicaSiArgumentareComponent implements OnInit {
     } else {
       return false;
     }
-
+    
   }
 }

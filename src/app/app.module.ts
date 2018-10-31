@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { LogicaSiArgumentareComponent } from './logica-si-argumentare/logica-si-argumentare.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LogicaSiArgumentareComponent
   ],
   imports: [
     BrowserModule

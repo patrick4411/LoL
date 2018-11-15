@@ -54,6 +54,6 @@ export class LogicaSiArgumentareComponent implements OnInit {
     } else {
       return false;
     }
-    
   }
+
 }

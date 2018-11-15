@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogicaSiArgumentareComponent implements OnInit {
 
-  astazi= new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDay(), 0, 0, 0);
+  astazi = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDay(), 0, 0, 0);
   grupHappyBirthday = new Array();
   ziDeNastere: Date;
   nume: string;
-  nume1 : string;
+  nume1: string;
   msg: string;
   index: number;
   filtru: boolean;
@@ -24,7 +24,7 @@ export class LogicaSiArgumentareComponent implements OnInit {
     this.filtru = false;
     this.nume = 'Host \'s Server';
     this.ziDeNastere = new Date('2018-09-28 0:00:00');
-    if (this.isZiDeNastere(this.ziDeNastere) === false {
+    if (this.isZiDeNastere(this.ziDeNastere) === false) {
       this.msg = 'La Multi Ani ' + this.nume;
     } else {
       this.msg = 'Mai e putin!';
@@ -32,10 +32,10 @@ export class LogicaSiArgumentareComponent implements OnInit {
 
 
 
-    while(this.filtru !== true) {
+    while (this.filtru !== true) {
 
       this.index ++;
-      if(this.index > 10) {
+      if (this.index > 10) {
         this.filtru = true;
       }
       console.log(this.index);

@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LogicaSiArgumentareComponent } from './logica-si-argumentare/logica-si-argumentare.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogicaSiArgumentareComponent
+    LogicaSiArgumentareComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule

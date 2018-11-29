@@ -23,7 +23,8 @@ export class LoginComponent implements OnInit {
 
     // console.log(this.username);
   
-   this.list.forEach(utilizator => {
+    this.verificUserValid = false;
+    this.list.forEach(utilizator => {
     if(utilizator === this.username) {
         this.verificUserValid = true;
      }

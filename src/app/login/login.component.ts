@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   list= new Array<String>();
   contor:number;
   msgUserG = 'Username Gresit';
+  verificUserValid = false;
   constructor() { }
   
   ngOnInit() {
@@ -20,17 +21,20 @@ export class LoginComponent implements OnInit {
 
   chechUser(user: string) {
 
-    console.log(this.username);
-
-  //  this.list.forEach(utilizator => {
-  //   if(utilizator === this.username) {
-  //      return true;
-  //    }
-  //    else{
-  //       return this.msgUserG;
-  //     }
+    // console.log(this.username);
+  
+   this.list.forEach(utilizator => {
+    if(utilizator === this.username) {
+        this.verificUserValid = true;
+     }
      
-  //  });
+   });
+     
+  //  if(this.verificUserValid === false){
+  //    console.log('E rau!');
+  //  }
+
+  this.verificUserValid ? console.log('E bun!') : console.log('E rau!');
     
   }
 

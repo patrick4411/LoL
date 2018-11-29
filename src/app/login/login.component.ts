@@ -18,16 +18,19 @@ export class LoginComponent implements OnInit {
   }
 
 
-  chechUser(user) {
-   this.list.forEach(utilizator => {
-    if(utilizator === this.username) {
-       return true;
-     }
-     else{
-        return this.msgUserG;
-      }
+  chechUser(user: string) {
+
+    console.log(this.username);
+
+  //  this.list.forEach(utilizator => {
+  //   if(utilizator === this.username) {
+  //      return true;
+  //    }
+  //    else{
+  //       return this.msgUserG;
+  //     }
      
-   });
+  //  });
     
   }
 

@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
     this.list = ["David","Roby","Patrick","Raul","Mathi"];
   }
 
-
   chechUser(user: string) {
   
     this.verificUserValid = false;

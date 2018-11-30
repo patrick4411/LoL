@@ -10,24 +10,23 @@ export class LoginComponent implements OnInit {
   pass:string;
   list= new Array<String>();
   contor:number;
-  msgUserG = 'Username Gresit';
-  constructor() { }
+  verificUserValid = false;
   
   ngOnInit() {
-    this.list = ["davidxz","roby","patrick","raul","mathi"];
+    this.list = ["David","Roby","Patrick","Raul","Mathi"];
   }
 
-
-  chechUser(user) {
-   this.list.forEach(utilizator => {
-    if(utilizator === this.username) {
-       return true;
+  chechUser(user: string) {
+  
+    this.verificUserValid = false;
+    this.list.forEach(utilizator => {
+     if(utilizator === this.username) {
+        this.verificUserValid = true;
      }
-     else{
-        return this.msgUserG;
-      }
      
    });
+     
+  this.verificUserValid ? console.log('E bun!') : console.log('E rau!');
     
   }
 

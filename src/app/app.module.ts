@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { LogicaSiArgumentareComponent } from './logica-si-argumentare/logica-si-argumentare.component';
 import { LoginComponent } from './login/login.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     ButtonModule,
     InputTextModule,
-    PasswordModule
+    PasswordModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

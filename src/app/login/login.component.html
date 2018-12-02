@@ -1,9 +1,20 @@
-<div id= lol class="ui-g">
-<input type="Username" pInputText placeholder="Username" />
+<<<<<<< HEAD
+<div class="ui-g">
+    <input placeholder = "Username" type="Username" pInputText [(ngModel)]="username" />
 </div>
-<div id= lol class="ui-g">
-<input type="password" pPassword placeholder="Password" />
+<div class="ui-g">
+    <input placeholder = "password" type="Password" pPassword [(ngModel)]="pass" />
 </div>
-<div id= lol class="ui-g">
-<button pButton type="button" label="Log in"></button>
+<div class="ui-g">
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1">
+        <button style="float:right" pButton type="button" label="Log in" (click)="checkUser()" (click)="checkPass()" (click)="checkAvalability()"></button>
+    </div>
+    <div class="ui-g-10"></div>    
 </div>
+   
+=======
+<input type="Username" pInputText />
+<input type="password" pPassword />
+<button pButton type="button" label="Log in" ></button>
+>>>>>>> 32f4051d74c34b78cc3d8d92f3f52b93426b0e08

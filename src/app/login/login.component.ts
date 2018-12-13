@@ -51,5 +51,6 @@ export class LoginComponent implements OnInit {
   registerUser(){
     if(this.username != '' && (this.regPass1 === this.regPass2))
       this.list.push([this.username, this.regPass1]);
+    this.registerOrLogin = !this.registerOrLogin;
   }
 }

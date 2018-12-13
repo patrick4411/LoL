@@ -7,6 +7,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  registerOrLogin= true;
   username:string;
   pass:string;
   regpass1:string;

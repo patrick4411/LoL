@@ -16,10 +16,11 @@ export class LoginComponent implements OnInit {
   verificUserValid = false;
   verificPassValid = false;
   compatibil = false;
+  avalability = false;
 
   ngOnInit() {
-    this.list = ["David","Roby","Patrick","Raul","Mathi"];
-    this.PassList = ["dev1","","","",""];
+    this.list = ["David","Roby","Patrick","Mathi","Raul"];
+    this.PassList = ["dev1","dev2","dev3","dev4","devboss"];
   }
 
   checkUser(user: string) {
@@ -59,6 +60,18 @@ export class LoginComponent implements OnInit {
         console.log('Parola e gresita!')
         this.compatibil ? console.log('Ai intrat!') : console.log('Nu ai intrat!')
       }
+    
+    // checkCompatibility(avalabill: string){
+    //   if(this.avalability === true)
+    //     console.log('Ai intrat!')        
+    //   if(this.avalability !== true)
+    //     console.log('Nu ai intrat!')
+    //   if(this.verificUserValid !== true)
+    //     console.log('Numele e gresit!')
+    //   if(this.verificPassValid !== true)
+    //     console.log('Parola e gresita!')
+
+    // }
   
  }
 

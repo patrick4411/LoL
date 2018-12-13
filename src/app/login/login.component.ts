@@ -10,8 +10,8 @@ export class LoginComponent implements OnInit {
   registerOrLogin= true;
   username:string;
   pass:string;
-  regpass1:string;
-  regpass2:string;
+  regPass1:string;
+  regPass2:string;
   list = new Array<Array<String>>();
   PassList= new Array<String>();
   verificUserValid = false;
@@ -34,45 +34,22 @@ export class LoginComponent implements OnInit {
      }
      
    });
-  //  this.checkAvalability();
-  //this.verificUserValid ? console.log('E bun!') : console.log('E rau!');
-    
   }
-
-  // checkPass(parole: string){
-  //   this.verificPassValid = false;
-  //   this.PassList.forEach(parola => {
-  //     if(parola === this.pass){
-  //       this.verificPassValid = true;
-  //     }
-      
-  //   });
-   
-  //   //this.verificPassValid ? console.log('Parola e ok!') : console.log('Parola e gresita!')
-  // }
 
   checkAvalability(){
     if(this.verificPassValid === true && this.verificUserValid === true)
       this.compatibil = true;
-      else
-        this.compatibil = false;
-        if(this.verificUserValid !== true)
-          console.log('Numele e gresit!')
-        if(this.verificPassValid !== true)
-        console.log('Parola e gresita!')
-        this.compatibil ? console.log('Ai intrat!') : console.log('Nu ai intrat!')
-      }
+    else
+      this.compatibil = false;
+    if(this.verificUserValid !== true)
+      console.log('Numele e gresit!')
+    if(this.verificPassValid !== true)
+      console.log('Parola e gresita!')
+    this.compatibil ? console.log('Ai intrat!') : console.log('Nu ai intrat!')
+    }
   
-  
-
-
-
-
-
-
-
-
- }
-
-  
-
+  registerUser(){
+    if(this.username != '' && (this.regPass1 === this.regPass2))
+      this.list.push([this.username, this.regPass1]);
+  }
+}

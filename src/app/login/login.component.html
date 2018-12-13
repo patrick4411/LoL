@@ -1,13 +1,34 @@
-<div class="ui-g">
-    <input placeholder = "Username" type="Username" pInputText [(ngModel)]="username" />
-</div>
-<div class="ui-g">
-    <input placeholder = "password" type="Password" pPassword [(ngModel)]="pass" />
-</div>
-<div class="ui-g">
-    <div class="ui-g-1"></div>
-    <div class="ui-g-1">
-        <button style="float:right" pButton type="button" label="Log in" (click)="checkUser()" (click)="checkPass()" (click)="checkAvalability()"></button>
+<div *ngIf="registerOrLogin">
+    <div class="ui-g">
+        <input placeholder = "Username" type="Username" pInputText [(ngModel)]="username" />
     </div>
-    <div class="ui-g-10"></div>    
+    <div class="ui-g">
+        <input placeholder = "password" type="Password" pPassword [(ngModel)]="pass" />
+    </div>
+    <div class="ui-g">
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1">
+            <button style="float:right" pButton type="button" label="Log in" (click)="checkUser()" (click)="checkPass()" (click)="checkAvalability()"></button>
+        </div>
+        <div class="ui-g-10"></div>    
+    </div>
+</div>
+
+<div *ngIf="!registerOrLogin">
+    <div class="ui-g">
+        <input placeholder = "Username" type="Username" pInputText [(ngModel)]="username" />
+    </div>
+    <div class="ui-g">
+        <input placeholder = "password" type="Password" pPassword [(ngModel)]="pass" />
+    </div>
+    <div class="ui-g">
+        <input placeholder = "password" type="Password Confirm" pPassword [(ngModel)]="pass" />
+    </div>
+    <div class="ui-g">
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1">
+            <button style="float:right" pButton type="button" label="Register" (click)="checkUser()" (click)="checkPass()" (click)="checkAvalability()"></button>
+        </div>
+        <div class="ui-g-10"></div>      
+    </div>
 </div>

@@ -9,46 +9,48 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 export class LoginComponent implements OnInit {
   username:string;
   pass:string;
-  list= new Array<String>();
+  regpass1:string;
+  regpass2:string;
+  list = new Array<Array<String>>();
   PassList= new Array<String>();
-  contor:number;
-  numarLista = 5;
   verificUserValid = false;
   verificPassValid = false;
   compatibil = false;
-
   ngOnInit() {
-    this.list = ["David","Roby","Patrick","Raul","Mathi"];
-    this.PassList = ["dev1","","","",""];
+  
   }
 
-  checkUser(user: string) {
+  checkUser() {
   
     this.verificUserValid = false;
+    this.verificPassValid = false;
     this.list.forEach(utilizator => {
-     if(utilizator === this.username) {
+     if(utilizator[0] = this.username) {
         this.verificUserValid = true;
+        if(utilizator[1] === this.pass){
+          this.verificPassValid = true;
+        }
      }
      
    });
-     
+  //  this.checkAvalability();
   //this.verificUserValid ? console.log('E bun!') : console.log('E rau!');
     
   }
 
-  checkPass(parole: string){
-    this.verificPassValid = false;
-    this.PassList.forEach(parola => {
-      if(parola === this.pass){
-        this.verificPassValid = true;
-      }
+  // checkPass(parole: string){
+  //   this.verificPassValid = false;
+  //   this.PassList.forEach(parola => {
+  //     if(parola === this.pass){
+  //       this.verificPassValid = true;
+  //     }
       
-    });
+  //   });
    
-    //this.verificPassValid ? console.log('Parola e ok!') : console.log('Parola e gresita!')
-  }
+  //   //this.verificPassValid ? console.log('Parola e ok!') : console.log('Parola e gresita!')
+  // }
 
-  checkAvalability(compatibil: string){
+  checkAvalability(){
     if(this.verificPassValid === true && this.verificUserValid === true)
       this.compatibil = true;
       else
@@ -60,6 +62,15 @@ export class LoginComponent implements OnInit {
         this.compatibil ? console.log('Ai intrat!') : console.log('Nu ai intrat!')
       }
   
+  
+
+
+
+
+
+
+
+
  }
 
   

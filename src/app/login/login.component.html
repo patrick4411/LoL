@@ -19,16 +19,17 @@
         <input placeholder = "Username" type="Username" pInputText [(ngModel)]="username" />
     </div>
     <div class="ui-g">
-        <input placeholder = "password" type="Password" pPassword [(ngModel)]="pass" />
+        <input placeholder = "password" type="Password" pPassword [(ngModel)]="regpass1" />
     </div>
     <div class="ui-g">
-        <input placeholder = "password" type="Password Confirm" pPassword [(ngModel)]="pass" />
+        <input placeholder = "password" type="Password Confirm" pPassword [(ngModel)]="regpass2" />
     </div>
-    <div class="ui-g">
-        <div class="ui-g-1"></div>
-        <div class="ui-g-1">
-            <button style="float:right" pButton type="button" label="Register" (click)="checkUser()" (click)="checkPass()" (click)="checkAvalability()"></button>
-        </div>
-        <div class="ui-g-10"></div>      
+</div>
+
+<div class="ui-g">
+    <div class="ui-g-1"></div>
+    <div class="ui-g-1">
+        <button style="float:right" pButton type="button" label="Register" (click)="registerUser()"></button>
     </div>
+    <div class="ui-g-10"></div>      
 </div>

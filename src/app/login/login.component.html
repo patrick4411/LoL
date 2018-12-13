@@ -1,14 +1,43 @@
-<div class="ui-g">
-    <input placeholder = "Username" type="Username" pInputText [(ngModel)]="username" />
+<div *ngIf="registerOrLogin">
+    <div class="ui-g">
+        <input placeholder = "Username" type="Username" pInputText [(ngModel)]="username" />
+    </div>
+    <div class="ui-g">
+        <input placeholder = "password" type="Password" pPassword [(ngModel)]="pass" />
+    </div>
+    <div class="ui-g">
+        <div class="ui-g-1"></div>
+        <div class="ui-g-1">
+            <button style="float:right" pButton type="button" label="Log in" (click)="checkUser()" (click)="checkAvalability()"></button>
+        </div>
+        <div class="ui-g-10"></div>    
+    </div>
 </div>
-<div class="ui-g">
-    <input placeholder = "password" type="Password" pPassword [(ngModel)]="pass" />
+
+<div *ngIf="!registerOrLogin">
+    <div class="ui-g">
+        <input placeholder = "Username" type="Username" pInputText [(ngModel)]="username" />
+    </div>
+    <div class="ui-g">
+        <input placeholder = "password" type="Password" pPassword [(ngModel)]="regPass1" />
+    </div>
+    <div class="ui-g">
+        <input placeholder = "password Confirm" type="Password" pPassword [(ngModel)]="regPass2" />
+    </div>
 </div>
+
 <div class="ui-g">
     <div class="ui-g-1"></div>
     <div class="ui-g-1">
+<<<<<<< HEAD
         <button style="float:right" pButton type="button" label="Log in" (click)="checkUser()" (click)="checkPass()" (click)="checkCompatibility()"></button>
     </div>
     <div class="ui-g-10"></div>    
 </div>
    
+=======
+        <button style="float:right" pButton type="button" label="Register" (click)="registerUser()"></button>
+    </div>
+    <div class="ui-g-10"></div>      
+</div>
+>>>>>>> 476b0b1362e4f692a97a1baa95468f0f7d1b3906

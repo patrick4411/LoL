@@ -17,8 +17,16 @@ export class LoginComponent implements OnInit {
   verificUserValid = false;
   verificPassValid = false;
   compatibil = false;
+<<<<<<< HEAD
+  avalability = false;
+
+  ngOnInit() {
+    this.list = ["David","Roby","Patrick","Mathi","Raul"];
+    this.PassList = ["dev1","dev2","dev3","dev4","devboss"];
+=======
   ngOnInit() {
   
+>>>>>>> 476b0b1362e4f692a97a1baa95468f0f7d1b3906
   }
 
   checkUser() {
@@ -39,6 +47,31 @@ export class LoginComponent implements OnInit {
   checkAvalability(){
     if(this.verificPassValid === true && this.verificUserValid === true)
       this.compatibil = true;
+<<<<<<< HEAD
+      else
+        this.compatibil = false;
+        if(this.verificUserValid !== true)
+          console.log('Numele e gresit!')
+        if(this.verificPassValid !== true)
+        console.log('Parola e gresita!')
+        this.compatibil ? console.log('Ai intrat!') : console.log('Nu ai intrat!')
+      }
+    
+    // checkCompatibility(avalabill: string){
+    //   if(this.avalability === true)
+    //     console.log('Ai intrat!')        
+    //   if(this.avalability !== true)
+    //     console.log('Nu ai intrat!')
+    //   if(this.verificUserValid !== true)
+    //     console.log('Numele e gresit!')
+    //   if(this.verificPassValid !== true)
+    //     console.log('Parola e gresita!')
+
+    // }
+  
+ }
+
+=======
     else
       this.compatibil = false;
     if(this.verificUserValid !== true)
@@ -47,6 +80,7 @@ export class LoginComponent implements OnInit {
       console.log('Parola e gresita!')
     this.compatibil ? console.log('Ai intrat!') : console.log('Nu ai intrat!')
     }
+>>>>>>> 476b0b1362e4f692a97a1baa95468f0f7d1b3906
   
   registerUser(){
     if(this.username != '' && (this.regPass1 === this.regPass2))

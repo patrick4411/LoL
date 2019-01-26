@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ButtonModule} from 'primeng/button';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 @Component({
@@ -8,14 +8,18 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 })
 export class ProfileComponent implements OnInit {
 
+  @Input() user: string;
   text: string;
   userData = new Array<Array<string>>();
+  nickName: string;
+  bioText: string;
 
   disabledNickName = true;
   disabledbiotext = true;
   constructor() { }
 
   ngOnInit() {
+
   }
 
   toggleDisabledNickName() {
@@ -26,7 +30,16 @@ export class ProfileComponent implements OnInit {
       this.disabledbiotext = !this.disabledbiotext;
   }
 
-  
+  saveProfile(){
+    this.userData.push([,this.nickName,this.bioText]);
+    console.log(this.userData);
+  }
+
+  loadProfile(){
+   this.userData.push([]) 
+    
+  }
+
 
 }
 

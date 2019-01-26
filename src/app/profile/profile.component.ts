@@ -35,5 +35,12 @@ export class ProfileComponent implements OnInit {
     this.userData.push([this.user,this.nickName,this.bioText]);
     console.log(this.userData);
   }
+
+  loadProfile(){
+   this.userData.push([]) 
+    
+  }
+
+
 }
 

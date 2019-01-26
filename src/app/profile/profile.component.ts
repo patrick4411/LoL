@@ -9,6 +9,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 export class ProfileComponent implements OnInit {
 
   text: string;
+  userData = new Array<Array<string>>();
 
   disabledNickName = true;
   constructor() { }

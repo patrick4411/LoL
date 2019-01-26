@@ -9,8 +9,11 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 export class ProfileComponent implements OnInit {
 
   text: string;
+  nickName: string;
+  bioText: string;
 
   disabledNickName = true;
+  disabledbiotext = true;
   constructor() { }
 
   ngOnInit() {
@@ -18,6 +21,10 @@ export class ProfileComponent implements OnInit {
 
   toggleDisabledNickName() {
       this.disabledNickName = !this.disabledNickName;
+  }
+
+  toggleDisabledBio() {
+      this.disabledbiotext = !this.disabledbiotext;
   }
 
 }

@@ -4,15 +4,15 @@
         <div>Avatar</div>
       <div class= "ui-g-4"></div>
       <h3>Nick Name</h3>
-      <input id="disabled-input" type="nickName" size="30" pInputText [disabled]="disabledNickName" />
+      <input id="disabled-input" type="nickName" size="30" pInputText [disabled]="disabledNickName" [(ngModel)]="nickName" />
       
       <button id="disabled-btn" type="button" (click)="toggleDisabledNickName()" pButton label="Edit"></button>
           <hr>
           <h3>Bio</h3>
           <!-- <input id="disabled-input" type="text" size="30" pInputText [disabled]="disabled" /> -->
-          <textarea pInputTextarea [(ngModel)]="bio"></textarea>
+          <textarea pInputTextarea [(ngModel)]="bioText" [disabled]="disabledbiotext"></textarea>
           
-          <button id="disabled-btn" type="button" (click)="toggleDisabledBio()" pButton label="Edit" [disabled]="toggleDisabledBio"></button>
+          <button id="disabled-btn" type="button" (click)="toggleDisabledBio()" pButton label="Edit"></button>
           
         <div class="ui-g-7"></div>
   </div>

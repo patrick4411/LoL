@@ -18,7 +18,7 @@ export class InputTextDemo {
 
   text: string;
 
-  disabled: boolean = true;
+  disabled = true;
 
   toggleDisabled() {
       this.disabled = !this.disabled;

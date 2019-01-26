@@ -8,7 +8,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 })
 export class ProfileComponent implements OnInit {
 
-  @Input() user: string;
+  @Input() 
+  user: string;
   text: string;
   userData = new Array<Array<string>>();
   nickName: string;
@@ -31,15 +32,8 @@ export class ProfileComponent implements OnInit {
   }
 
   saveProfile(){
-    this.userData.push([,this.nickName,this.bioText]);
+    this.userData.push([this.user,this.nickName,this.bioText]);
     console.log(this.userData);
   }
-
-  loadProfile(){
-   this.userData.push([...]) 
-    
-  }
-
-
 }
 

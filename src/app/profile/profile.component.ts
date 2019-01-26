@@ -19,6 +19,8 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('profile');
+    console.log(this.user);
 
   }
 
@@ -36,7 +38,7 @@ export class ProfileComponent implements OnInit {
   }
 
   loadProfile(){
-   this.userData.push([...]) 
+   this.userData.push();
     
   }
 

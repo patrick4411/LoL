@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     if ( this.checkUser()) {
       this.checkAvalability();
       console.log('in4');
+      console.log(this.username);
       this.router.navigate(['profile']);
     }
     // this.checkAvalability();

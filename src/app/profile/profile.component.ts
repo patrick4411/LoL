@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ButtonModule} from 'primeng/button';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 @Component({
@@ -8,6 +8,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 })
 export class ProfileComponent implements OnInit {
 
+  @Input() user: string;
   text: string;
   userData = new Array<Array<string>>();
   nickName: string;

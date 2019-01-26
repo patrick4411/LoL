@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 import { routingModule } from './routing.module';
 
 @NgModule({
@@ -16,6 +17,7 @@ import { routingModule } from './routing.module';
     ProfileComponent
   ],
   imports: [
+    InputTextareaModule,
     BrowserModule,
     ButtonModule,
     InputTextModule,

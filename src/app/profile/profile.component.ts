@@ -9,12 +9,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 export class ProfileComponent implements OnInit {
 
   text: string;
-<<<<<<< HEAD
   userData = new Array<Array<string>>();
-=======
-  nickName: string;
-  bioText: string;
->>>>>>> 9007034e135daaf7701d8277dd12d7a71d26f97c
 
   disabledNickName = true;
   disabledbiotext = true;
@@ -30,6 +25,8 @@ export class ProfileComponent implements OnInit {
   toggleDisabledBio() {
       this.disabledbiotext = !this.disabledbiotext;
   }
+
+  
 
 }
 
